@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+   const div =  document.createElement('div');
+   console.log(div);
+//for attributes 
+   div.className = "main";
+   div.id = "nikhil";
+   div.setAttribute("title", "genratea title");
+   div.style.backgroundColor = "red";
+
+   // crate node 
+    div.innerText = "nikhil";
+   const addText = document.createTextNode("chai ki dukan");
+                             
+   div.appendChild(addText);
+
+   document.body.appendChild(div)
+
+
+//    const headin =  document.createElement('h1');
+//    console.log(heading);
+</script>
+</html>
