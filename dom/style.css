@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-h1{
+/* h1{
     width: fit-content;
     color: blueviolet;
     background: purple;
@@ -28,4 +28,7 @@ button{
     color: blue;
     background-color: blueviolet;
 
+} */
+.parent{
+    background-color: red;
 }
