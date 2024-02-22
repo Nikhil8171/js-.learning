@@ -1,20 +1,55 @@
-const promise1 = new Promise((resolve , reject) => {
-    // do async task 
-    setTimeout(function(){
-        console.log('do async');
-        resolve()
-    }, 1000)
-})
+// promoises
 
-promise1.then(function(){
-    console.log('consume');
-})
 
-const Promisethree = new Promise((resolve,reject) => {
- setTimeout(function(){
-    resolve({username: "chai", email:"chai@example.com"})
- }, 5000)
-})
-Promisethree.then(function(user){
-    console.log(user);
-})
+
+function regester (){
+     return new Promise ((resolve ,reject)=>{
+         setTimeout(function(){
+             console.log("register");
+             resolve();
+         },1000)
+     })
+}
+function sendmail (){
+    return new Promise ((resolve ,reject)=>{
+        setTimeout(function(){
+            // return reject("error for not ");
+            console.log("mail");
+            resolve();
+        },3000)
+    })
+}
+
+function login (){
+        return new Promise ((resolve ,reject)=>{
+        setTimeout(function(){
+            console.log("login");
+            resolve()
+        },1000)
+    })
+}
+
+
+// regester()
+// .then(sendmail)
+// .then(login)
+// .catch((err)=>{
+//     console.log("error:", err );
+// })
+
+
+ async function authentication(){
+   await regester();
+   await sendmail();
+   await login();
+
+}
+
+authentication();
+
+
+
+
+console.log("hello");
+
+
