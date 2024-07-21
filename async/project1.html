@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur code </h1>
+    <button class="start">start </button>
+    <button class="stop">stop </button>
+    
+</body>
+<script>
+    // const print = function(){
+    //     console.log("nikhil");
+    // }
+
+    // document.querySelector("h1").innerHTML = " best js "
+    // setTimeout(print, 2000);
+    let tail; 
+    const print2 = function(){
+        if(!tail){
+            tail = setInterval(print2, 1000)
+        }
+           console.log("nikhil", Date.now());
+    }
+
+    
+    
+    document.querySelector(".start").addEventListener("click",print2 );
+
+    const stop = function(){
+            clearInterval(tail);
+            tail = null;
+    }
+
+
+   
+    document.querySelector(".stop").addEventListener('click',stop);
+
+
+</script>
+</html>
